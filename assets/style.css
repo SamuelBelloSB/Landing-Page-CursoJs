@@ -52,6 +52,7 @@ C:::::C                          S:::::S            S:::::S
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -83,7 +84,10 @@ h1 {
 }
 
 h2 {
-    font-size: 5.5rem;
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 h3 {
@@ -216,6 +220,11 @@ h6 {
                                                                                                                                                                                                                         
 */
 
+.intro {
+    
+    margin: 0 auto;
+}
+
 .intro-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -225,19 +234,13 @@ h6 {
     top: -6.5rem;
 }
 
-.intro-content-text {
+.intro-content-text, .intro-content-image  {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-.intro-content-text h2 {
-    text-transform: uppercase;
-    line-height: 1.2;
-}
-
-.intro-content-image {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+.intro-content-image img {
+    max-width: 100%;
+    height: auto;
 }
