@@ -56,6 +56,7 @@ C:::::C                          S:::::S            S:::::S
 
 html{
     font-size: 62.5%;
+    line-height: 1.5;
 }
 
 body {
@@ -215,11 +216,28 @@ h6 {
                                                                                                                                                                                                                         
 */
 
-.intro {
+.intro-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     height: 100vh;
     gap: var(--gap);
     position: relative;
     top: -6.5rem;
+}
+
+.intro-content-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-content-text h2 {
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro-content-image {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
 }
