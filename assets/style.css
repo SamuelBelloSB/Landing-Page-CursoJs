@@ -48,6 +48,7 @@ C:::::C                          S:::::S            S:::::S
    
     /* tamanhos */
     --container-width: 120rem;
+    --container-width-small: 80rem;
 
     /* fontes */
     --font-bold: 700;
@@ -143,6 +144,23 @@ img {
     overflow: clip;
 }
 
+table {
+    width: 100%;
+    min-width: 60rem;    
+    border-collapse: collapse;
+}
+
+table td, table th {
+    white-space: nowrap;
+    text-align: left;
+    padding: 0.5rem;
+    border: 0.1rem solid var(--light-gray-color);
+}
+
+table thead {
+    background-color: var(--light-gray-color);
+}
+
 /*
 
   __  __   ______   _   _   _    _ 
@@ -175,6 +193,7 @@ img {
     padding-bottom: 0;
     padding-top: 0;
     max-width: var(--container-width);
+    margin: 0 auto;
 }
 
 .menu h1 {
@@ -245,7 +264,15 @@ img {
     max-width: var(--container-width);
     min-height: 100vh;
     margin: 0 auto;
-    padding: var(--spacing-xlarge) var(--gap);
+    padding: var(--spacing-large) var(--spacing-xlarge) ;
+    width: 100%;
+}
+
+.section-text {
+    max-width: var(--container-width-small);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: var(--spacing-large) var(--spacing-xlarge) ;
     width: 100%;
 }
 
@@ -292,7 +319,6 @@ _____   _   _   _______   _____     ____              _____    ____    _   _   _
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    width: 64rem;
     text-align: center;
 }
 
@@ -381,4 +407,31 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
 
 .photo img:hover {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+/*
+  _____    _____    _____    _____   _____   _   _    _____             _____    ____    _   _   _______   ______   _   _   _______ 
+ |  __ \  |  __ \  |_   _|  / ____| |_   _| | \ | |  / ____|           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+ | |__) | | |__) |   | |   | |        | |   |  \| | | |  __   ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+ |  ___/  |  _  /    | |   | |        | |   | . ` | | | |_ | |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ | |      | | \ \   _| |_  | |____   _| |_  | |\  | | |__| |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+ |_|      |_|  \_\ |_____|  \_____| |_____| |_| \_|  \_____|           \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                                                                                                                                                                        
+*/
+
+.table-div {
+    overflow-x: auto;
+}
+
+.table-caption {
+    text-align: left;
+    font-style: italic;
+    font-size: var(--font-xsmall);
+    padding-bottom: var(--spacing-xsmall);
+}
+
+.table-footer {
+    text-align: end;
+    padding-right: 15rem;
+    font-weight: var(--font-bold);
 }
