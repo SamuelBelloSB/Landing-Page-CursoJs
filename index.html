@@ -1,74 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>Simples Página</title>
-</head>
-<body >
-    <div id="home" class="menu-space"></div>
-    <aside class="menu">
-        <div class="menu-content">
-            <h1>
-                <a href="#home">LOGO</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#intro">intro</a></li>
-                    <li><a href="#top3">top3</a></li>
-                    <li><a href="#gallery">gallery</a></li>
-                    <li><a href="#work">work</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
-    <section id="home" class="main-bg">
-        <div class="home-content section">
-            <header class="home-content-text">
-                <h2>January brings us Firefox 85</h2>
-                <p>To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.</p>
-            </header>
-            <div class="home-content-image">
-                <img src="assets/img/javascript.svg" alt="Desenho de um homem segurando a logo de Css, uma mulher segurando a logo do Javascript e e um homem segurando a logo do Html">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <title>Simples Página</title>
+    </head>
+    <body >
+        <div id="home" class="menu-space"></div>
+        <aside class="menu">
+            <div class="menu-content">
+                <h1>
+                    <a href="#home">LOGO</a>
+                </h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">home</a></li>
+                        <li><a href="#intro">intro</a></li>
+                        <li><a href="#top3">top3</a></li>
+                        <li><a href="#gallery">gallery</a></li>
+                        <li><a href="#work">work</a></li>
+                        <li><a href="#contact">contact</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-    </section>
-    <section id="intro" class="white-bg">
-        <div class="intro-content section">
-            <h2>TOP 3 JOBS</h2>
-            <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p>
-            <p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p>
-            <p>We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur, and discuss various updater problems we had to deal with. We’ll conclude with the release and an overview of various other improvements that are in the pipeline.</p>
-        </div>
-    </section>
-    <section id="top3" class="main-bg">
-        <div class="top3-content section">
-            <header class="top3-header">
-                <h2>TOP 3</h2>
-                <p>Here are some recent work.</p>
-            </header>
-            <div class="top3-grid"> 
-                <article>
-                    <h3>First</h3>
-                    <p>This button would add a box to the row of key content boxes below the intro text. This should put the box there regardless of where the user is currently writing.</p>
-                </article>
-                <article>
-                    <h3>Another site</h3>
-                    <p>I'd suggest having a popup that asks where in the row to insert the box (at the beginning or end), what title to give the box, what text to put in the box, and where the box should link to. The entire box should serve as a link to the destination page.</p>
-                </article>
-                <article>
-                    <h3>Third One</h3>
-                    <p>You can also include a type attribute containing the MIME type of the resource, so a browser can quickly see what resources are on offer, and ignore ones that it doesn’t support</p>
-                </article>
+        </aside>
+        <section id="home" class="main-bg">
+            <div class="home-content section">
+                <header class="home-content-text">
+                    <h2>January brings us Firefox 85</h2>
+                    <p>To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.</p>
+                </header>
+                <div class="home-content-image">
+                    <img src="assets/img/javascript.svg" alt="Desenho de um homem segurando a logo de Css, uma mulher segurando a logo do Javascript e e um homem segurando a logo do Html">
+                </div>
             </div>
-        </div>
-    </section>
-</body>
+        </section>
+        <section id="intro" class="white-bg">
+            <div class="intro-content section">
+                <h2>TOP 3 JOBS</h2>
+                <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p>
+                <p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p>
+                <p>We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur, and discuss various updater problems we had to deal with. We’ll conclude with the release and an overview of various other improvements that are in the pipeline.</p>
+            </div>
+        </section>
+        <section id="top3" class="main-bg">
+            <div class="top3-content section">
+                <header class="top3-header">
+                    <h2>TOP 3</h2>
+                    <p>Here are some recent work.</p>
+                </header>
+                <div class="top3-grid"> 
+                    <article>
+                        <h3>First</h3>
+                        <p>This button would add a box to the row of key content boxes below the intro text. This should put the box there regardless of where the user is currently writing.</p>
+                    </article>
+                    <article>
+                        <h3>Another site</h3>
+                        <p>I'd suggest having a popup that asks where in the row to insert the box (at the beginning or end), what title to give the box, what text to put in the box, and where the box should link to. The entire box should serve as a link to the destination page.</p>
+                    </article>
+                    <article>
+                        <h3>Third One</h3>
+                        <p>You can also include a type attribute containing the MIME type of the resource, so a browser can quickly see what resources are on offer, and ignore ones that it doesn’t support</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="white-bg">
+            <div class="gallery-content section">
+                <header>
+                    <h2>gallery</h2>
+                    <p>Here are some of my pics.</p>
+                </header>
+                <div class="grid-photo">
+                    <div class="photo">
+                        <img src="https://source.unsplash.com/random/800x800" alt="Uma revista sobre uma banquinho de madeira, a página da revista contém imagens de cabeças de marmoré">
+                    </div>
+                    <div class="photo">
+                        <img src="https://source.unsplash.com/random/800x800" alt="Uma cadeira feita em crochê branco, no fundo uma parede vermelha">
+                    </div>
+                    <div class="photo">
+                        <img src="https://source.unsplash.com/random/800x800" alt="Uma mulher preta, cabelo crespo e escuro, segurando um boque de flores, usando um vestido branco, batom vermelho, pequenos brincos prateados e um chapeu vermelho. Ela esta sentada em uma poltrona marrom. Ao fundo uma parede branca e uma porta de madeira marrom escuro">
+                    </div>
+                    <div class="photo">
+                        <img src="https://source.unsplash.com/random/800x800" alt="Uma sala com artes, dentre as artes há 3 quadros na parede, uma estande com estatuetas e ao centro da sala tem uma estatua feita em mármore.">
+                    </div>
+                    <div class="photo">
+                        <img src="https://source.unsplash.com/random/800x800" alt="Uma foto de um grande campo, com montanhas e uma estrada com efeito de luz dos carros em movimento.">
+                    </div>
+                    <div class="photo">
+                        <img src="https://source.unsplash.com/random/800x800" alt="Um homem branco, cabelo cacheado de cor castanho escuro, sentado sobre uma pano no chão, tocando violão, vestindo uma camisa social branca, calça cáqui e tênis preto. Junto ao homem tem uma mulher branca, cabelo preso cor castanho escuro, ela esta deitada na perna do homem e ela esta usando um vestido azul claro">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

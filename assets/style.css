@@ -133,6 +133,12 @@ p {
     margin: 0 0 var(--spacing-medium);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
 
 /*
 
@@ -236,7 +242,8 @@ p {
     max-width: var(--container-width);
     min-height: 100vh;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: var(--spacing-xlarge) var(--gap);
+    width: 100%;
 }
 
 /* .section {
@@ -267,10 +274,6 @@ p {
     justify-content: center;
 }
 
-.home-content-image img {
-    max-width: 100%;
-    height: auto;
-}
 
 /* 
 _____   _   _   _______   _____     ____              _____    ____    _   _   _______   ______   _   _   _______ 
@@ -286,7 +289,7 @@ _____   _   _   _______   _____     ____              _____    ____    _   _   _
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    max-width: 64rem;
+    width: 64rem;
     text-align: center;
 }
 
@@ -304,7 +307,6 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    max-width: var(--container-width);
 }
 
 .top3-header {
@@ -335,4 +337,45 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
     top: -4rem;
     left: -7rem;
     transform: rotate(3deg);
+}
+
+.top3-grid article {
+    width: 100%;
+}
+
+/*
+   _____              _        _        ______   _____   __     __            _____    ____    _   _   _______   ______   _   _   _______ 
+  / ____|     /\     | |      | |      |  ____| |  __ \  \ \   / /           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+ | |  __     /  \    | |      | |      | |__    | |__) |  \ \_/ /   ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+ | | |_ |   / /\ \   | |      | |      |  __|   |  _  /    \   /   |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ | |__| |  / ____ \  | |____  | |____  | |____  | | \ \     | |             | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+  \_____| /_/    \_\ |______| |______| |______| |_|  \_\    |_|              \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                                                                                                                                                                                    
+*/
+
+.gallery-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.grid-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.photo {
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.photo img {
+    transition: all 300ms ease-in-out;
+}
+
+.photo img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
