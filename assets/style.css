@@ -44,6 +44,7 @@ C:::::C                          S:::::S            S:::::S
     --spacing-small: 2rem;
     --spacing-medium: 3rem;
     --spacing-large: 5rem;
+    --spacing-xlarge: 8rem;
    
     /* tamanhos */
     --container-width: 120rem;
@@ -303,7 +304,11 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    max-width: 64rem;
+    max-width: var(--container-width);
+}
+
+.top3-header {
+    margin-bottom: var(--spacing-xlarge);
 }
 
 .top3-grid {
@@ -314,5 +319,20 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
 }
 
 .top3-grid h3 {
-    font-size: var(--spacing-medium) ;
+    font-size: var(--spacing-medium);
+    position: relative;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.top3-grid h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: var(--font-xlarge);
+    font-style: italic;
+    top: -4rem;
+    left: -7rem;
+    transform: rotate(3deg);
 }
