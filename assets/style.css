@@ -109,6 +109,7 @@ h2 {
     margin-bottom: var(--spacing-large);
     text-transform: uppercase;
     line-height: 1.2;
+    margin: 0 0 var(--spacing-large);
 }
 
 h3 {
@@ -127,37 +128,10 @@ h6 {
     font-size: 3.5rem;
 }
 
-/*
-   _____   _                    _____    _____   ______    _____ 
-  / ____| | |          /\      / ____|  / ____| |  ____|  / ____|
- | |      | |         /  \    | (___   | (___   | |__    | (___  
- | |      | |        / /\ \    \___ \   \___ \  |  __|    \___ \ 
- | |____  | |____   / ____ \   ____) |  ____) | | |____   ____) |
-  \_____| |______| /_/    \_\ |_____/  |_____/  |______| |_____/ 
-                                                                                                                                
-*/
-
-.main-bg {
-    background-image: url('../assets/img/main-bg.svg');
-    background-size: cover;
-    background-position: center center;
-    color: var(--white-color);
+p {
+    margin: 0 0 var(--spacing-medium);
 }
 
-.white-bg {
-    background-color: var(--white-color);
-    color: var(--primary-color);
-}
-
-.main-content {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: var(--gap);
-}
-
-.section {
-    min-height: 100vh;
-}
 
 /*
 
@@ -171,15 +145,6 @@ h6 {
                                    
 */
 
-.menu-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 0;
-    padding-top: 0;
-    border-bottom: 1px solid var(--light-gray-color)
-}
-
 .menu {
     background-color: var(--white-color);
     position: fixed;
@@ -188,6 +153,18 @@ h6 {
     right: 0;
     width: 100%;
     z-index: 1;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    border-bottom: 1px solid var(--light-gray-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 0;
+    max-width: var(--container-width);
 }
 
 .menu h1 {
@@ -232,6 +209,40 @@ h6 {
 }
 
 /*
+ __  __              _____   _   _             _____    ____    _   _   _______   ______   _   _   _______ 
+|  \/  |     /\     |_   _| | \ | |           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+| \  / |    /  \      | |   |  \| |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+| |\/| |   / /\ \     | |   | . ` | |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+| |  | |  / ____ \   _| |_  | |\  |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+|_|  |_| /_/    \_\ |_____| |_| \_|           \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|    
+
+*/
+                                                                                                                                                                                                                      
+
+.main-bg {
+    background-image: url('../assets/img/main-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.white-bg {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.section {
+    max-width: var(--container-width);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+/* .section {
+    min-height: 100vh;
+} */
+
+/*
   _    _    ____    __  __   ______             _____    ____    _   _   _______   ______   _   _   _______ 
  | |  | |  / __ \  |  \/  | |  ____|           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
  | |__| | | |  | | | \  / | | |__     ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
@@ -244,7 +255,6 @@ h6 {
 .home-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    height: 100vh;
     gap: var(--gap);
     position: relative;
     top: -6.5rem;
@@ -262,28 +272,47 @@ h6 {
 }
 
 /* 
-_______    ____    _____    ____              _____    ____    _   _   _______   ______   _   _   _______ 
-|__   __|  / __ \  |  __ \  |___ \            / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
-   | |    | |  | | | |__) |   __) |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
-   | |    | |  | | |  ___/   |__ <  |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
-   | |    | |__| | | |       ___) |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
-   |_|     \____/  |_|      |____/            \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
-                                                                                                                                                                                                                       
-*/
+_____   _   _   _______   _____     ____              _____    ____    _   _   _______   ______   _   _   _______ 
+|_   _| | \ | | |__   __| |  __ \   / __ \            / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+  | |   |  \| |    | |    | |__) | | |  | |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+  | |   | . ` |    | |    |  _  /  | |  | | |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ _| |_  | |\  |    | |    | | \ \  | |__| |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+|_____| |_| \_|    |_|    |_|  \_\  \____/            \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                    
+*/                                                                                                               
 
-.top3-content {
+.intro-content {
     display: flex;
     flex-flow: column nowrap;
-    height: 100vh;
     justify-content: center;
     max-width: 64rem;
     text-align: center;
 }
 
-.top3-content h2 {
-    margin: 0 0 var(--spacing-large);
+/* 
+_______    ____    _____    ____              _____    ____    _   _   _______   ______   _   _   _______ 
+|__   __|  / __ \  |  __ \  |___ \            / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+   | |    | |  | | | |__) |   __) |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+   | |    | |  | | |  ___/   |__ <  |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+   | |    | |__| | | |       ___) |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+   |_|     \____/  |_|      |____/            \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|    
+
+*/
+
+.top3-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 64rem;
 }
 
-.top3-content p {
-    margin: 0 0 var(--spacing-medium);
+.top3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.top3-grid h3 {
+    font-size: var(--spacing-medium) ;
 }
