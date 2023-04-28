@@ -427,7 +427,7 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
     text-align: left;
     font-style: italic;
     font-size: var(--font-xsmall);
-    padding-bottom: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-small);
 }
 
 .table-footer {
@@ -460,4 +460,85 @@ _______    ____    _____    ____              _____    ____    _   _   _______  
 
 .contact-form {
     grid-column: span 2;
+}
+
+.contact-form-fieldset {
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--gap);
+}
+
+.contact-form-fieldset legend {
+    text-align: left;
+    font-style: italic;
+    font-size: var(--font-xsmall);
+    margin-bottom: var(--spacing-small);
+}
+
+.contact-form-group {
+    flex: 1 1 32rem;
+}
+
+.contact-form-group label {
+    display: block;
+    margin-bottom: var(--font-xsmall);
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    outline: inset var(--secondary-color);
+}
+
+body .full-width {
+    flex: 1 1 100%;
+    width: 100%;
+}
+
+.contact-form-group button {
+    border: 0.5px solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.contact-form-group button:hover {
+    border: 0.5px solid var(--white-color);
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.contact-form-group ::placeholder {
+    color: rgb(213, 213, 214);
+}
+
+.footer {
+    text-align: center;
+    font-size: var(--font-small);
+    font-weight: var(--font-bold);
+}
+
+.footer p {
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+.footer a {
+    color: var(--primary-color);
+}
+
+.heart {
+    color:var(--secondary-color);
 }
