@@ -1,0 +1,437 @@
+/*
+                                                           
+                                                           
+        CCCCCCCCCCCCC   SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS 
+     CCC::::::::::::C SS:::::::::::::::S SS:::::::::::::::S
+   CC:::::::::::::::CS:::::SSSSSS::::::SS:::::SSSSSS::::::S
+  C:::::CCCCCCCC::::CS:::::S     SSSSSSSS:::::S     SSSSSSS
+ C:::::C       CCCCCCS:::::S            S:::::S            
+C:::::C              S:::::S            S:::::S            
+C:::::C               S::::SSSS          S::::SSSS         
+C:::::C                SS::::::SSSSS      SS::::::SSSSS    
+C:::::C                  SSS::::::::SS      SSS::::::::SS  
+C:::::C                     SSSSSS::::S        SSSSSS::::S 
+C:::::C                          S:::::S            S:::::S
+ C:::::C       CCCCCC            S:::::S            S:::::S
+  C:::::CCCCCCCC::::CSSSSSSS     S:::::SSSSSSSS     S:::::S
+   CC:::::::::::::::CS::::::SSSSSS:::::SS::::::SSSSSS:::::S
+     CCC::::::::::::CS:::::::::::::::SS S:::::::::::::::SS 
+        CCCCCCCCCCCCC SSSSSSSSSSSSSSS    SSSSSSSSSSSSSSS   
+                                                           
+        
+*/
+
+/*
+ __      __             _____    _____      __    __      __  ______   _____    _____ 
+ \ \    / /     /\     |  __ \  |_   _|    /_/    \ \    / / |  ____| |_   _|  / ____|
+  \ \  / /     /  \    | |__) |   | |      / \     \ \  / /  | |__      | |   | (___  
+   \ \/ /     / /\ \   |  _  /    | |     / _ \     \ \/ /   |  __|     | |    \___ \ 
+    \  /     / ____ \  | | \ \   _| |_   / ___ \     \  /    | |____   _| |_   ____) |
+     \/     /_/    \_\ |_|  \_\ |_____| /_/   \_\     \/     |______| |_____| |_____/ 
+                                                                                                                                                                            
+*/
+
+:root{
+    /* cores */
+    --primary-color: #0A1128;
+    --white-color: #FFFFFF;
+    --light-gray-color: #EEEEEE;
+    --secondary-color: crimson;
+
+    /* espaçamentos */
+    --gap: 3rem;
+    --spacing-xsmall: 1rem;
+    --spacing-small: 2rem;
+    --spacing-medium: 3rem;
+    --spacing-large: 5rem;
+    --spacing-xlarge: 8rem;
+   
+    /* tamanhos */
+    --container-width: 120rem;
+    --container-width-small: 80rem;
+
+    /* fontes */
+    --font-bold: 700;
+    --font-xxlarge: 10rem;
+    --font-xlarge: 8rem;
+    --font-large: 6rem;
+    --font-medium: 4rem;
+    --font-normal: 2.3rem;
+    --font-small: 1.8rem;
+    --font-xsmall: 1.6rem;
+    --font-xxsmall: 1.4rem;
+}
+
+/*
+  _____    ______    _____   ______   _______ 
+ |  __ \  |  ____|  / ____| |  ____| |__   __|
+ | |__) | | |__    | (___   | |__       | |   
+ |  _  /  |  __|    \___ \  |  __|      | |   
+ | | \ \  | |____   ____) | | |____     | |   
+ |_|  \_\ |______| |_____/  |______|    |_|   
+                                              
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: var(--font-large);
+    font-weight: var(--font-bold);
+}
+
+h2 {
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-large);
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 var(--spacing-large);
+    font-weight: var(--font-bold);
+}
+
+h3 {
+    font-size: var(--font-medium);
+    font-weight: var(--font-bold);
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+p {
+    margin: 0 0 var(--spacing-medium);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+table {
+    width: 100%;
+    min-width: 60rem;    
+    border-collapse: collapse;
+}
+
+table td, table th {
+    white-space: nowrap;
+    text-align: left;
+    padding: 0.5rem;
+    border: 0.1rem solid var(--light-gray-color);
+}
+
+table thead {
+    background-color: var(--light-gray-color);
+}
+
+/*
+
+  __  __   ______   _   _   _    _ 
+ |  \/  | |  ____| | \ | | | |  | |
+ | \  / | | |__    |  \| | | |  | |
+ | |\/| | |  __|   | . ` | | |  | |
+ | |  | | | |____  | |\  | | |__| |
+ |_|  |_| |______| |_| \_|  \____/ 
+                                   
+                                   
+*/
+
+.menu {
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+    border-bottom: 1px solid var(--light-gray-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+    padding-top: 0;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    position: relative;
+    display: block;
+    padding: var(--spacing-small);
+    font-size: var(--font-small);
+    color: var(--primary-color);
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0%;
+    height: 0.2rem;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+.menu-space {
+    height: 6.5rem;
+}
+
+/*
+ __  __              _____   _   _             _____    ____    _   _   _______   ______   _   _   _______ 
+|  \/  |     /\     |_   _| | \ | |           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+| \  / |    /  \      | |   |  \| |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+| |\/| |   / /\ \     | |   | . ` | |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+| |  | |  / ____ \   _| |_  | |\  |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+|_|  |_| /_/    \_\ |_____| |_| \_|           \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|    
+
+*/
+                                                                                                                                                                                                                      
+
+.main-bg {
+    background-image: url('/assets/img/main-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.white-bg {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+.section {
+    max-width: var(--container-width);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: var(--spacing-large) var(--spacing-xlarge) ;
+    width: 100%;
+}
+
+.section-text {
+    max-width: var(--container-width-small);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: var(--spacing-large) var(--spacing-xlarge) ;
+    width: 100%;
+}
+
+/* .section {
+    min-height: 100vh;
+} */
+
+/*
+  _    _    ____    __  __   ______             _____    ____    _   _   _______   ______   _   _   _______ 
+ | |  | |  / __ \  |  \/  | |  ____|           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+ | |__| | | |  | | | \  / | | |__     ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+ |  __  | | |  | | | |\/| | |  __|   |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ | |  | | | |__| | | |  | | | |____           | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+ |_|  |_|  \____/  |_|  |_| |______|           \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                                                                                                                                                                                                                                                                                                                               
+*/
+
+.home-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    position: relative;
+    top: -6.5rem;
+}
+
+.home-content-text, .home-content-image  {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+
+/* 
+_____   _   _   _______   _____     ____              _____    ____    _   _   _______   ______   _   _   _______ 
+|_   _| | \ | | |__   __| |  __ \   / __ \            / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+  | |   |  \| |    | |    | |__) | | |  | |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+  | |   | . ` |    | |    |  _  /  | |  | | |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ _| |_  | |\  |    | |    | | \ \  | |__| |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+|_____| |_| \_|    |_|    |_|  \_\  \____/            \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                    
+*/                                                                                                               
+
+.intro-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 
+_______    ____    _____    ____              _____    ____    _   _   _______   ______   _   _   _______ 
+|__   __|  / __ \  |  __ \  |___ \            / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+   | |    | |  | | | |__) |   __) |  ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+   | |    | |  | | |  ___/   |__ <  |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+   | |    | |__| | | |       ___) |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+   |_|     \____/  |_|      |____/            \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|    
+
+*/
+
+.top3-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.top3-header {
+    margin-bottom: var(--spacing-xlarge);
+}
+
+.top3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.top3-grid h3 {
+    font-size: var(--spacing-medium);
+    position: relative;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.top3-grid h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: var(--font-xlarge);
+    font-style: italic;
+    top: -4rem;
+    left: -7rem;
+    transform: rotate(3deg);
+}
+
+.top3-grid article {
+    width: 100%;
+}
+
+/*
+   _____              _        _        ______   _____   __     __            _____    ____    _   _   _______   ______   _   _   _______ 
+  / ____|     /\     | |      | |      |  ____| |  __ \  \ \   / /           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+ | |  __     /  \    | |      | |      | |__    | |__) |  \ \_/ /   ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+ | | |_ |   / /\ \   | |      | |      |  __|   |  _  /    \   /   |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ | |__| |  / ____ \  | |____  | |____  | |____  | | \ \     | |             | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+  \_____| /_/    \_\ |______| |______| |______| |_|  \_\    |_|              \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                                                                                                                                                                                    
+*/
+
+.gallery-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.grid-photo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+}
+
+.photo {
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;
+}
+
+.photo img {
+    transition: all 300ms ease-in-out;
+}
+
+.photo img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+/*
+  _____    _____    _____    _____   _____   _   _    _____             _____    ____    _   _   _______   ______   _   _   _______ 
+ |  __ \  |  __ \  |_   _|  / ____| |_   _| | \ | |  / ____|           / ____|  / __ \  | \ | | |__   __| |  ____| | \ | | |__   __|
+ | |__) | | |__) |   | |   | |        | |   |  \| | | |  __   ______  | |      | |  | | |  \| |    | |    | |__    |  \| |    | |   
+ |  ___/  |  _  /    | |   | |        | |   | . ` | | | |_ | |______| | |      | |  | | | . ` |    | |    |  __|   | . ` |    | |   
+ | |      | | \ \   _| |_  | |____   _| |_  | |\  | | |__| |          | |____  | |__| | | |\  |    | |    | |____  | |\  |    | |   
+ |_|      |_|  \_\ |_____|  \_____| |_____| |_| \_|  \_____|           \_____|  \____/  |_| \_|    |_|    |______| |_| \_|    |_|   
+                                                                                                                                                                                                                                                                        
+*/
+
+.table-div {
+    overflow-x: auto;
+}
+
+.table-caption {
+    text-align: left;
+    font-style: italic;
+    font-size: var(--font-xsmall);
+    padding-bottom: var(--spacing-xsmall);
+}
+
+.table-footer {
+    text-align: end;
+    padding-right: 15rem;
+    font-weight: var(--font-bold);
+}
